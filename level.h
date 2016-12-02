@@ -10,18 +10,21 @@ class Level
 public:
     Level();
 
-    int getLevel();
+    //int getLevel();
+    //void getNextLevel();
+    //void getMap();
+    void createLevel(std::vector<std::vector<int>> level);
 
-    void setSize(int x, int y);
+private: //fields
 
-    void getNextLevel();
-    void getMap();
-
-private:
     int sizeX;
     int sizeY;
     int lenght;
     int num;
+
+private: //methods
+
+    void setSize(int x, int y);
 };
 
 #endif // LEVEL_H
