@@ -43,12 +43,27 @@ bool LevelManager::loadLevel(std::string level)
         std::cout << "Size Y: " << y << std::endl;
 
 
-        while ( std::getline(file, data) ) {
-            for ( int i = 0; i < data.size(); i++ ) {
-                if ( data.at(i) == 'X' ) {
+        //std::vector<int> tempLine;
+        std::getline(file, data);
+        std::getline(file, data);
 
+        int j = 0;
+        while ( std::getline(file, data) ) {
+            std::vector<int> tempLine;// = new std::vector<int>;
+            for ( int i = 0; i < data.size(); i++ ) {
+                if ( data.at(i) == ' ' ) {
+                    tempLine.push_back(0);
+                } if ( data.at(i) == 'X' ) {
+                    tempLine.push_back(1);
+                } if ( data.at(i) == '*' ) {
+                    tempLine.push_back(2);
+                } if ( data.at(i) == '.' ) {
+                    tempLine.push_back(3);
+                } if ( data.at(i) == '@' ) {
+                    tempLine.push_back(4);
                 }
             }
+            levelMap.push_back(tempLine);
             j++;
         }
 
@@ -64,7 +79,7 @@ bool LevelManager::loadLevel(std::string level)
 bool LevelManager::createLevel()
 {
     level = new Level;
-    level->setSize(levelSizeX, levelSizeY);
+    level->createLevel(levelMap);
 }
 
 int LevelManager::getCurrentLevel()
