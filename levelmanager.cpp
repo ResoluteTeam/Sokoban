@@ -42,13 +42,14 @@ bool LevelManager::loadLevel(std::string level)
         isy >> y;
         std::cout << "Size Y: " << y << std::endl;
 
-        map = new map[x][y];
+
         while ( std::getline(file, data) ) {
             for ( int i = 0; i < data.size(); i++ ) {
                 if ( data.at(i) == 'X' ) {
-                    std::cout << 1;
+
                 }
             }
+            j++;
         }
 
         file.close();

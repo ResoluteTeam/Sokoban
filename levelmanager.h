@@ -25,7 +25,6 @@ private:
 
     int levelLenght;
 
-    int map[][];
     Level* level;
 
 };
