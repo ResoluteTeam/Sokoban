@@ -7,8 +7,11 @@ Man::Man()
 
 void Man::draw()
 {
-    SetConsoleCursorPosition(consolePtr, position);
-    std::cout << "@";
+    if(visible)
+    {
+        SetConsoleCursorPosition(consolePtr, position);
+        std::cout << "@";
+    }
 }
 
 bool Man::canMove(int targetX, int targetY)

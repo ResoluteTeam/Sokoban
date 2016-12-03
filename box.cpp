@@ -7,8 +7,11 @@ Box::Box()
 
 void Box::draw()
 {
-    SetConsoleCursorPosition(consolePtr, position);
-    std::cout << "*";
+    if(visible)
+    {
+        SetConsoleCursorPosition(consolePtr, position);
+        std::cout << "*";
+    }
 }
 
 bool Box::canMove(int targetX, int targetY)

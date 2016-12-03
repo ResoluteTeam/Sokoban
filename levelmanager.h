@@ -15,7 +15,6 @@ public:
     LevelManager();
 
     bool loadLevel(std::string level);
-    //bool createLevel();
 
     int getCurrentLevel();
 

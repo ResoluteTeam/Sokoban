@@ -7,6 +7,9 @@ Teleport::Teleport()
 
 void Teleport::draw()
 {
-    SetConsoleCursorPosition(consolePtr, position);
-    std::cout << "O";
+    if(visible)
+    {
+        SetConsoleCursorPosition(consolePtr, position);
+        std::cout << "O";
+    }
 }

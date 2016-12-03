@@ -16,9 +16,6 @@ class Level
 public:
     Level();
 
-    //int getLevel();
-    //void getNextLevel();
-    //void getMap();
     void createLevel(std::vector<std::vector<int> > level);
     void setSize(int x, int y);
     void draw();

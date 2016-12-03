@@ -15,11 +15,6 @@ bool LevelManager::loadLevel(std::string level)
     std::string sizeX;
     std::string sizeY;
 
-    int lenght = 0;
-
-    int x = 0;
-    int y = 0;
-
     file.open(level, std::ios::in);
 
     if( file.is_open() ) {
@@ -33,24 +28,12 @@ bool LevelManager::loadLevel(std::string level)
         std::cout << "Current level: " << currentLevel << std::endl;
         std::cout << "Press arrows to move, ESC to exit" << std::endl;
 
-//        std::istringstream isx(sizeX, std::istringstream::in);
-//        isx >> data >> data;
-//        isx >> x;
-//        std::cout << "Size X: " << x << std::endl;
-
-//        std::istringstream isy(sizeY, std::istringstream::in);
-//        isy >> data >> data;
-//        isy >> y;
-//        std::cout << "Size Y: " << y << std::endl;
-
-
-        //std::vector<int> tempLine;
         std::getline(file, data);
         std::getline(file, data);
         levelMap.clear();
 
         while ( std::getline(file, data) ) {
-            std::vector<int> tempLine;// = new std::vector<int>;
+            std::vector<int> tempLine;
             for ( int i = 0; i < data.size(); i++ ) {
                 if ( data.at(i) == ' ' ) {
                     tempLine.push_back(0);
@@ -77,14 +60,6 @@ bool LevelManager::loadLevel(std::string level)
 
     return true;
 }
-
-//bool LevelManager::createLevel()
-//{
-//    level = new Level;
-//    level->createLevel(levelMap);
-
-//    return true;
-//}
 
 int LevelManager::getCurrentLevel()
 {

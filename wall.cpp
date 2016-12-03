@@ -7,6 +7,10 @@ Wall::Wall()
 
 void Wall::draw()
 {
-    SetConsoleCursorPosition(consolePtr, position);
-    std::cout << "#";
+    if(visible)
+    {
+        SetConsoleCursorPosition(consolePtr, position);
+        std::cout << "#";
+    }
 }
+

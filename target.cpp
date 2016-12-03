@@ -23,8 +23,11 @@ bool Target::status()
 
 void Target::draw()
 {
-    SetConsoleCursorPosition(consolePtr, position);
-    std::cout << ".";
+    if(visible)
+    {
+        SetConsoleCursorPosition(consolePtr, position);
+        std::cout << ".";
+    }
 }
 
 void Target::setBoxes(std::vector<Box*>* arr)

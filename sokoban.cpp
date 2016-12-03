@@ -23,9 +23,7 @@ void Sokoban::run()
 
 void Sokoban::initializieLevel()
 {
-    //lm = new LevelManager;
-    lm->loadLevel("debug\\Level1.txt");
-    //lm->createLevel();
+    lm->loadLevel("levels\\Level1.txt");
     level = new Level;
     level->createLevel(lm->getLevel());
 }
