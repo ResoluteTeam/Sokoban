@@ -23,6 +23,8 @@ public:
 
     std::vector<std::vector<int>> getLevelMap();
 
+    Level* getLevel();
+
 public:
     std::vector<std::vector<int>> levelMap;
 

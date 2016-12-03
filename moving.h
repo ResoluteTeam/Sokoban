@@ -8,7 +8,7 @@ class Moving
 {
     public:
         Moving();
-        void Moving::setLevel(std::vector<FieldObject *> array);
+        void setLevel(std::vector<FieldObject *> array);
 
         virtual bool canMove(int directionX, int directionY);
         virtual void move(int directionX, int directionY);

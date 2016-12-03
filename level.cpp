@@ -14,9 +14,6 @@ void Level::setSize(int x, int y)
     sizeY = y;
 }
 
-<<<<<<< HEAD
-void Level::setSize(int x, int y)
-=======
 void Level::draw()
 {
     for(int i = 0; i < sizeX; i++)
@@ -37,7 +34,6 @@ void Level::draw()
 }
 
 void Level::update()
->>>>>>> origin/master
 {
 
 }

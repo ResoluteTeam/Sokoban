@@ -92,14 +92,19 @@ int LevelManager::getCurrentLevel()
 
 void LevelManager::nextLevel()
 {
-    if ( currentLevel < 9 ) {
-        int tempLvl = currentLevel + 1;
-        std::string nxtlvl = tempLvl;
-        loadLevel(nxtlvl);
-    }
+//    if ( currentLevel < 9 ) {
+//        int tempLvl = currentLevel + 1;
+//        std::string nxtlvl = tempLvl;
+//        loadLevel(nxtlvl);
+//    }
 }
 
 std::vector<std::vector<int> > LevelManager::getLevelMap()
 {
     return levelMap;
+}
+
+Level *LevelManager::getLevel()
+{
+    return level;
 }
