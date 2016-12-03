@@ -17,7 +17,8 @@ bool Box::canMove(int targetX, int targetY)
     {
         if(objects[i]->getX() == targetX + getX() && objects[i]->getY() == targetY + getY())
         {
-            return false;
+            if(objects[i]->getType() != TYPE::TARGET)
+                return false;
         }
     }
 
