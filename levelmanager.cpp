@@ -1,4 +1,5 @@
 #include "levelmanager.h"
+#include "iostream"
 
 LevelManager::LevelManager()
 {
@@ -95,7 +96,7 @@ void LevelManager::nextLevel()
     if ( currentLevel < 9 ) {
         int tempLvl = currentLevel + 1;
         std::string nxtlvl = std::to_string(tempLvl);
-        std::string tmp = "D:\\Level" + nxtlvl + ".txt";
+        std::string tmp = "debug\\Level" + nxtlvl + ".txt";
         loadLevel(tmp);
     }
 }
