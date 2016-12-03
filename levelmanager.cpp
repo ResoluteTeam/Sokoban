@@ -14,13 +14,12 @@ bool LevelManager::loadLevel(std::string level)
     std::string sizeX;
     std::string sizeY;
 
-    int currentLevel = 0;
     int lenght = 0;
 
     int x = 0;
     int y = 0;
 
-    file.open("D:\\Level1.txt", std::ios::in);
+    file.open(level, std::ios::in);
 
     if( file.is_open() ) {
         std::getline(file, tempLevel);
@@ -47,6 +46,7 @@ bool LevelManager::loadLevel(std::string level)
         //std::vector<int> tempLine;
         std::getline(file, data);
         std::getline(file, data);
+        levelMap.clear();
 
         int j = 0;
         while ( std::getline(file, data) ) {
@@ -90,14 +90,15 @@ int LevelManager::getCurrentLevel()
     return currentLevel;
 }
 
-//void LevelManager::nextLevel()
-//{
-////    if ( currentLevel < 9 ) {
-////        int tempLvl = currentLevel + 1;
-////        std::string nxtlvl = tempLvl;
-////        loadLevel(nxtlvl);
-////    }
-//}
+void LevelManager::nextLevel()
+{
+    if ( currentLevel < 9 ) {
+        int tempLvl = currentLevel + 1;
+        std::string nxtlvl = std::to_string(tempLvl);
+        std::string tmp = "D:\\Level" + nxtlvl + ".txt";
+        loadLevel(tmp);
+    }
+}
 std::vector<std::vector<int>> LevelManager::getLevel()
 {
     return levelMap;

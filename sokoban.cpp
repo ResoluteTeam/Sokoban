@@ -2,7 +2,7 @@
 
 Sokoban::Sokoban()
 {
-
+    lm = new LevelManager;
 }
 
 void Sokoban::run()
@@ -14,7 +14,7 @@ void Sokoban::run()
     while(!exit)
     {
         if(checkWin())
-            exit = true;
+            nextLevel();
         draw();
         getInput();
     }
@@ -23,8 +23,8 @@ void Sokoban::run()
 
 void Sokoban::initializieLevel()
 {
-    lm = new LevelManager;
-    lm->loadLevel("Level1.txt");
+    //lm = new LevelManager;
+    lm->loadLevel("D:\\Level1.txt");
     //lm->createLevel();
     level = new Level;
     level->createLevel(lm->getLevel());
@@ -58,4 +58,14 @@ void Sokoban::getInput()
     key = getch();
     level->processInput(key);
 
+}
+
+void Sokoban::nextLevel()
+{
+    delete level;
+    system("cls");
+
+    lm->nextLevel();
+    level = new Level;
+    level->createLevel(lm->getLevel());
 }
