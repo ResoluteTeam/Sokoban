@@ -49,7 +49,6 @@ bool LevelManager::loadLevel(std::string level)
         std::getline(file, data);
         levelMap.clear();
 
-        int j = 0;
         while ( std::getline(file, data) ) {
             std::vector<int> tempLine;// = new std::vector<int>;
             for ( int i = 0; i < data.size(); i++ ) {
@@ -63,10 +62,11 @@ bool LevelManager::loadLevel(std::string level)
                     tempLine.push_back(3);
                 } if ( data.at(i) == '@' ) {
                     tempLine.push_back(4);
+                } if ( data.at(i) == 'О' ) {
+                    tempLine.push_back(5);
                 }
             }
             levelMap.push_back(tempLine);
-            j++;
         }
 
         file.close();
