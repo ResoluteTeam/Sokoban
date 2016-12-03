@@ -78,8 +78,8 @@ void Level::moveMan(int horizontal, int vertical)
 {
     int targetX = man->getX() + horizontal;
     int targetY = man->getY() + vertical;
-    man->setPosition(targetX, targetY);
-   // man->move(targetX, targetY);
+    //man->setPosition(targetX, targetY);
+    man->move(targetX, targetY);
 }
 
 void Level::createLevel(std::vector<std::vector<int> > level)

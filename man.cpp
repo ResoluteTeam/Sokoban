@@ -31,7 +31,6 @@ void Man::move(int targetX, int targetY)
 {
     if(canMove(targetX, targetY))
     {
-        positionX = targetX;
-        positionY = targetY;
+        setPosition(targetX, targetY);
     }
 }
