@@ -76,14 +76,13 @@ void Level::processInput(char key)
 
 void Level::moveMan(int horizontal, int vertical)
 {
-    int targetX = man->getX() + horizontal;
-    int targetY = man->getY() + vertical;
-    //man->setPosition(targetX, targetY);
-    man->move(targetX, targetY);
+    man->move(horizontal, vertical);
 }
 
 void Level::createLevel(std::vector<std::vector<int> > level)
 {
+    std::vector<Box*> boxes;
+
     setSize(level.size(), level[0].size());
       for(int i = 0; i < level.size(); i++)
       {
@@ -107,6 +106,7 @@ void Level::createLevel(std::vector<std::vector<int> > level)
                     Box* box = new Box;
                     box->setPosition(j,i);
                     objects.push_back(box);
+                    boxes.push_back(box);
              }
                  break;
 
@@ -133,4 +133,8 @@ void Level::createLevel(std::vector<std::vector<int> > level)
       }
 
       man->setLevel(objects);
+      for(int i = 0; i < boxes.size(); i++)
+      {
+            boxes[i]->setLevel(objects);
+      }
 }

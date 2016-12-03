@@ -20,6 +20,16 @@ void FieldObject::draw()
 
 }
 
+bool FieldObject::canMove(int directionX, int directionY)
+{
+    return false;
+}
+
+void FieldObject::move(int directionX, int directionY)
+{
+
+}
+
 int FieldObject::getX()
 {
     return positionX;
@@ -28,4 +38,9 @@ int FieldObject::getX()
 int FieldObject::getY()
 {
     return positionY;
+}
+
+TYPE FieldObject::getType()
+{
+    return type;
 }
