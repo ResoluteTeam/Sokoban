@@ -3,6 +3,7 @@
 
 #include "level.h"
 #include "levelmanager.h"
+#include "conio.h"
 
 class Sokoban
 {
@@ -12,7 +13,10 @@ public:
     void initializieLevel();
 
 private:
-    Level level;
+    LevelManager* lm;
+    Level* level;
+
+    bool exit;
 
 private:
     void update();

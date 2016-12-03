@@ -4,10 +4,11 @@
 #include "fieldobject.h"
 #include "moving.h"
 
-class Box: FieldObject, Moving
+class Box: public FieldObject, public Moving
 {
 public:
     Box();
+    void draw();
 };
 
 #endif // BOX_H

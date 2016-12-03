@@ -3,10 +3,11 @@
 
 #include "fieldobject.h"
 
-class Wall: FieldObject
+class Wall: public FieldObject
 {
 public:
     Wall();
+    void draw();
 };
 
 #endif // WALL_H

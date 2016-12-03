@@ -3,7 +3,7 @@
 
 #include "fieldobject.h"
 
-class Teleport: FieldObject
+class Teleport: public FieldObject
 {
 public:
     Teleport();
