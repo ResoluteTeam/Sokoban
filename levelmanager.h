@@ -5,6 +5,7 @@
 #include <fstream>
 #include <string.h>
 #include <sstream>
+#include <vector>
 
 #include "level.h"
 
@@ -13,10 +14,13 @@ class LevelManager
 public:
     LevelManager();
 
-    bool loadLevel(std::__cxx11::string level);
+    bool loadLevel(std::string level);
     bool createLevel();
 
     int getCurrentLevel();
+
+public:
+    std::vector<std::vector<int>> levelMap;
 private:
     int currentLevel;
 
@@ -26,6 +30,7 @@ private:
     int levelLenght;
 
     Level* level;
+
 
 };
 

@@ -1,5 +1,6 @@
 #ifndef LEVEL_H
 #define LEVEL_H
+#include <vector>
 
 #include "vector"s
 
@@ -17,8 +18,8 @@ public:
     //int getLevel();
     //void getNextLevel();
     //void getMap();
-    void createLevel(std::vector<std::vector<int>> level);
-
+    void createLevel(std::vector<std::vector<int> > level);
+    void setSize(int x, int y);
 private: //fields
 
     int sizeX;
@@ -30,7 +31,7 @@ private: //fields
 
 private: //methods
 
-    void setSize(int x, int y);
+
 };
 
 #endif // LEVEL_H
