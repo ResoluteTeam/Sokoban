@@ -4,6 +4,7 @@
 #include "level.h"
 #include "levelmanager.h"
 #include "conio.h"
+#include "Windows.h"
 
 class Sokoban
 {

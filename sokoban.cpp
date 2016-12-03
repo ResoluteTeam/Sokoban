@@ -46,6 +46,11 @@ void Sokoban::getInput()
 
     if(key == 27)//If ESC
     {
+        HANDLE consolePtr = consolePtr = GetStdHandle(STD_OUTPUT_HANDLE);
+        COORD coord;
+        coord.X = 0;
+        coord.Y = 2;
+        SetConsoleCursorPosition(consolePtr, coord);
         exit = true;
         return;
     }
