@@ -36,6 +36,8 @@ void Level::draw()
     {
         boxes->at(i)->draw();
     }
+
+    man->draw();
 }
 
 bool Level::isWin()

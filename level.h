@@ -9,7 +9,6 @@
 #include "box.h"
 #include "man.h"
 #include "target.h"
-#include "player.h"
 
 class Level
 {

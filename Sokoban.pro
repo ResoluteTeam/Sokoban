@@ -13,8 +13,6 @@ SOURCES += main.cpp \
     man.cpp \
     level.cpp \
     statisticstable.cpp \
-    gamefield.cpp \
-    player.cpp \
     moving.cpp \
     levelmanager.cpp \
     sokoban.cpp
@@ -29,8 +27,6 @@ HEADERS += \
     man.h \
     level.h \
     statisticstable.h \
-    gamefield.h \
-    player.h \
     moving.h \
     levelmanager.h \
     sokoban.h
