@@ -16,7 +16,8 @@ SOURCES += main.cpp \
     gamefield.cpp \
     player.cpp \
     moving.cpp \
-    levelmanager.cpp
+    levelmanager.cpp \
+    sokoban.cpp
 
 HEADERS += \
     visible.h \
@@ -31,4 +32,5 @@ HEADERS += \
     gamefield.h \
     player.h \
     moving.h \
-    levelmanager.h
+    levelmanager.h \
+    sokoban.h

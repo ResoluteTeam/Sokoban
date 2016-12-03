@@ -1,9 +1,13 @@
 #ifndef LEVEL_H
 #define LEVEL_H
 
+#include "vector"s
+
+#include "fieldobject.h"
 #include "wall.h"
 #include "box.h"
 #include "man.h"
+#include "target.h"
 
 class Level
 {
@@ -21,6 +25,8 @@ private: //fields
     int sizeY;
     int lenght;
     int num;
+
+    std::vector<FieldObject*> objects;
 
 private: //methods
 
