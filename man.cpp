@@ -31,6 +31,22 @@ bool Man::canMove(int targetX, int targetY)
                }
                else return false;
             }
+
+            if(objects->at(i)->getType() == TYPE::TELEPORT)
+            {
+                for(int j = 0; j < objects->size(); j++)
+                {
+                    if(objects->at(j)->getType() == TYPE::TELEPORT)
+                    {
+                        if(objects->at(i)->getX() != objects->at(j)->getX() ||
+                                objects->at(i)->getY() != objects->at(j)->getY())
+                        {
+                            setPosition(objects->at(j)->getX(), objects->at(j)->getY());
+                            return false;
+                        }
+                    }
+                }
+            }
         }
     }
 

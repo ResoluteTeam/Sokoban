@@ -62,7 +62,7 @@ bool LevelManager::loadLevel(std::string level)
                     tempLine.push_back(3);
                 } if ( data.at(i) == '@' ) {
                     tempLine.push_back(4);
-                } if ( data.at(i) == 'О' ) {
+                } if ( data.at(i) == '0' ) {
                     tempLine.push_back(5);
                 }
             }

@@ -145,6 +145,14 @@ void Level::createLevel(std::vector<std::vector<int> > level)
              }
                  break;
 
+             case 5://Teleport
+             {
+                    Teleport* tp = new Teleport;
+                    tp->setPosition(j,i);
+                    objects->push_back(tp);
+             }
+                 break;
+
              default:
                  break;
              }

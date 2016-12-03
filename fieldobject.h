@@ -12,6 +12,7 @@ enum TYPE
     BOX,
     MAN,
     TARGET,
+    TELEPORT
 };
 
 class FieldObject: Visible

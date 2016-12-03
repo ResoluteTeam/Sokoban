@@ -7,6 +7,8 @@ class Teleport: public FieldObject
 {
 public:
     Teleport();
+
+    void draw();
     void teleportation();
 };
 

@@ -9,6 +9,7 @@
 #include "box.h"
 #include "man.h"
 #include "target.h"
+#include "teleport.h"
 
 class Level
 {
