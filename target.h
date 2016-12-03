@@ -3,11 +3,12 @@
 
 #include "fieldobject.h"
 
-class Target: FieldObject
+class Target: public FieldObject
 {
 public:
     Target();
     void status();
+    void draw();
 };
 
 #endif // TARGET_H

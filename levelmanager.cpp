@@ -30,17 +30,18 @@ bool LevelManager::loadLevel(std::string level)
         std::istringstream isl(tempLevel, std::istringstream::in);
         isl >> data;
         isl >> currentLevel;
-        std::cout << "Level: " << currentLevel << std::endl;
+        std::cout << "Current level: " << currentLevel << std::endl;
+        std::cout << "Press arrows to move, ESC to exit" << std::endl;
 
-        std::istringstream isx(sizeX, std::istringstream::in);
-        isx >> data >> data;
-        isx >> x;
-        std::cout << "Size X: " << x << std::endl;
+//        std::istringstream isx(sizeX, std::istringstream::in);
+//        isx >> data >> data;
+//        isx >> x;
+//        std::cout << "Size X: " << x << std::endl;
 
-        std::istringstream isy(sizeY, std::istringstream::in);
-        isy >> data >> data;
-        isy >> y;
-        std::cout << "Size Y: " << y << std::endl;
+//        std::istringstream isy(sizeY, std::istringstream::in);
+//        isy >> data >> data;
+//        isy >> y;
+//        std::cout << "Size Y: " << y << std::endl;
 
 
         //std::vector<int> tempLine;
@@ -80,6 +81,8 @@ bool LevelManager::createLevel()
 {
     level = new Level;
     level->createLevel(levelMap);
+
+    return true;
 }
 
 int LevelManager::getCurrentLevel()
