@@ -96,7 +96,7 @@ void LevelManager::nextLevel()
     if ( currentLevel < 9 ) {
         int tempLvl = currentLevel + 1;
         std::string nxtlvl = std::to_string(tempLvl);
-        std::string tmp = "debug\\Level" + nxtlvl + ".txt";
+        std::string tmp = "levels\\Level" + nxtlvl + ".txt";
         loadLevel(tmp);
     }
 }
