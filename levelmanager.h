@@ -19,8 +19,13 @@ public:
 
     int getCurrentLevel();
 
+    void nextLevel();
+
+    std::vector<std::vector<int>> getLevelMap();
+
 public:
     std::vector<std::vector<int>> levelMap;
+
 private:
     int currentLevel;
 
@@ -30,7 +35,6 @@ private:
     int levelLenght;
 
     Level* level;
-
 
 };
 
