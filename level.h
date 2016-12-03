@@ -32,7 +32,7 @@ private: //fields
     int lenght;
     int num;
 
-    std::vector<FieldObject*> objects;
+    std::vector<FieldObject*>* objects;
     Man* man;
 
     COORD position;

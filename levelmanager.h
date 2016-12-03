@@ -15,19 +15,14 @@ public:
     LevelManager();
 
     bool loadLevel(std::string level);
-    bool createLevel();
+    //bool createLevel();
 
     int getCurrentLevel();
 
-    void nextLevel();
-
-    std::vector<std::vector<int>> getLevelMap();
-
-    Level* getLevel();
+    std::vector<std::vector<int>> getLevel();
 
 public:
     std::vector<std::vector<int>> levelMap;
-
 private:
     int currentLevel;
 
@@ -37,6 +32,7 @@ private:
     int levelLenght;
 
     Level* level;
+
 
 };
 

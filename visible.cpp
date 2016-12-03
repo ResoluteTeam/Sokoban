@@ -4,3 +4,13 @@ Visible::Visible()
 {
 
 }
+
+void Visible::show()
+{
+
+}
+
+void Visible::hide()
+{
+
+}

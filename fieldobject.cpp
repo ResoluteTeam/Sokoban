@@ -5,6 +5,8 @@ FieldObject::FieldObject()
     spaceX = 3;
     spaceY = 5;
     consolePtr = GetStdHandle(STD_OUTPUT_HANDLE);
+
+    visible = true;
 }
 
 void FieldObject::setPosition(int x, int y)
@@ -43,4 +45,14 @@ int FieldObject::getY()
 TYPE FieldObject::getType()
 {
     return type;
+}
+
+void FieldObject::show()
+{
+    visible = true;
+}
+
+void FieldObject::hide()
+{
+    visible = false;
 }

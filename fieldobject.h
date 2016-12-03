@@ -20,9 +20,13 @@ public:
     FieldObject();
 
     void setPosition(int x, int y);
+
     virtual void draw();
     virtual bool canMove(int directionX, int directionY);
     virtual void move(int directionX, int directionY);
+
+    void show();
+    void hide();
 
     int getX();
     int getY();
@@ -33,6 +37,8 @@ protected:
     int positionX;
     int positionY;
     int spaceX, spaceY;
+
+    bool visible;
 
     TYPE type;
 

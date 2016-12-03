@@ -7,13 +7,15 @@
 class Moving
 {
     public:
+
         Moving();
-        void setLevel(std::vector<FieldObject *> array);
+
+        void setLevel(std::vector<FieldObject *>* array);
 
         virtual bool canMove(int directionX, int directionY);
         virtual void move(int directionX, int directionY);
 
-        std::vector<FieldObject*> objects;
+        std::vector<FieldObject*>* objects;
 };
 
 #endif // MOVING_H

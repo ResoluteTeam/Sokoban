@@ -5,7 +5,7 @@ Moving::Moving()
 
 }
 
-void Moving::setLevel(std::vector<FieldObject *> array)
+void Moving::setLevel(std::vector<FieldObject *>* array)
 {
     objects = array;
 }

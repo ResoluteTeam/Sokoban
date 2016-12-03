@@ -77,34 +77,28 @@ bool LevelManager::loadLevel(std::string level)
     return true;
 }
 
-bool LevelManager::createLevel()
-{
-    level = new Level;
-    level->createLevel(levelMap);
+//bool LevelManager::createLevel()
+//{
+//    level = new Level;
+//    level->createLevel(levelMap);
 
-    return true;
-}
+//    return true;
+//}
 
 int LevelManager::getCurrentLevel()
 {
     return currentLevel;
 }
 
-void LevelManager::nextLevel()
-{
-//    if ( currentLevel < 9 ) {
-//        int tempLvl = currentLevel + 1;
-//        std::string nxtlvl = tempLvl;
-//        loadLevel(nxtlvl);
-//    }
-}
-
-std::vector<std::vector<int> > LevelManager::getLevelMap()
+//void LevelManager::nextLevel()
+//{
+////    if ( currentLevel < 9 ) {
+////        int tempLvl = currentLevel + 1;
+////        std::string nxtlvl = tempLvl;
+////        loadLevel(nxtlvl);
+////    }
+//}
+std::vector<std::vector<int>> LevelManager::getLevel()
 {
     return levelMap;
-}
-
-Level *LevelManager::getLevel()
-{
-    return level;
 }

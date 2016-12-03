@@ -6,8 +6,8 @@ class Visible
 {
 public:
     Visible();
-    void show();
-    void hide();
+    virtual void show();
+    virtual void hide();
 };
 
 #endif // VISIBLE_H

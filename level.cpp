@@ -27,9 +27,9 @@ void Level::draw()
         }
     }
 
-    for(int i = 0; i < objects.size(); i++)
+    for(int i = 0; i < objects->size(); i++)
     {
-        objects[i]->draw();
+        objects->at(i)->draw();
     }
 }
 
@@ -81,9 +81,11 @@ void Level::moveMan(int horizontal, int vertical)
 
 void Level::createLevel(std::vector<std::vector<int> > level)
 {
+    objects = new std::vector<FieldObject*>;
     std::vector<Box*> boxes;
 
     setSize(level.size(), level[0].size());
+
       for(int i = 0; i < level.size(); i++)
       {
          for(int j = 0; j < level[i].size(); j++)
@@ -97,7 +99,7 @@ void Level::createLevel(std::vector<std::vector<int> > level)
              {
                     Wall* wall = new Wall;
                     wall->setPosition(j,i);
-                    objects.push_back(wall);
+                    objects->push_back(wall);
              }
                  break;
 
@@ -105,7 +107,7 @@ void Level::createLevel(std::vector<std::vector<int> > level)
              {
                     Box* box = new Box;
                     box->setPosition(j,i);
-                    objects.push_back(box);
+                    objects->push_back(box);
                     boxes.push_back(box);
              }
                  break;
@@ -114,7 +116,7 @@ void Level::createLevel(std::vector<std::vector<int> > level)
              {
                     Target* target = new Target;
                     target->setPosition(j,i);
-                    objects.push_back(target);
+                    objects->push_back(target);
              }
                  break;
 
@@ -122,7 +124,7 @@ void Level::createLevel(std::vector<std::vector<int> > level)
              {
                     man = new Man;
                     man->setPosition(j,i);
-                    objects.push_back(man);
+                    objects->push_back(man);
              }
                  break;
 
@@ -132,7 +134,9 @@ void Level::createLevel(std::vector<std::vector<int> > level)
          }
       }
 
+
       man->setLevel(objects);
+
       for(int i = 0; i < boxes.size(); i++)
       {
             boxes[i]->setLevel(objects);

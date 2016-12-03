@@ -13,20 +13,20 @@ void Man::draw()
 
 bool Man::canMove(int targetX, int targetY)
 {
-    for(int i = 0; i < objects.size(); i++)
+    for(int i = 0; i < objects->size(); i++)
     {
-        if(objects[i]->getX() == targetX + getX() && objects[i]->getY() == targetY + getY())
+        if(objects->at(i)->getX() == targetX + getX() && objects->at(i)->getY() == targetY + getY())
         {
-            if(objects[i]->getType() == TYPE::WALL)
+            if(objects->at(i)->getType() == TYPE::WALL)
             {
                 return false;
             }
 
-            if(objects[i]->getType() == TYPE::BOX)
+            if(objects->at(i)->getType() == TYPE::BOX)
             {
-               if(objects[i]->canMove(targetX, targetY))
+               if(objects->at(i)->canMove(targetX, targetY))
                {
-                    objects[i]->move(targetX, targetY);
+                    objects->at(i)->move(targetX, targetY);
                     return true;
                }
                else return false;
