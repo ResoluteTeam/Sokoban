@@ -4,6 +4,7 @@
 #include "level.h"
 #include "levelmanager.h"
 #include "conio.h"
+#include <stdlib.h>
 
 class Sokoban
 {
@@ -22,6 +23,7 @@ private:
     bool checkWin();
     void draw();
     void getInput();
+    void nextLevel();
 
 };
 

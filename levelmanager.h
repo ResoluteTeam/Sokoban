@@ -19,10 +19,13 @@ public:
 
     int getCurrentLevel();
 
+    void nextLevel();
+
     std::vector<std::vector<int>> getLevel();
 
 public:
     std::vector<std::vector<int>> levelMap;
+
 private:
     int currentLevel;
 
