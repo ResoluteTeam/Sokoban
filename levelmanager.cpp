@@ -20,7 +20,7 @@ bool LevelManager::loadLevel(std::string level)
     int x = 0;
     int y = 0;
 
-    file.open("D:\\Level1.txt", std::ios::in);
+    file.open("D:\\Level2.txt", std::ios::in);
 
     if( file.is_open() ) {
         std::getline(file, tempLevel);

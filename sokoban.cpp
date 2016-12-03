@@ -13,7 +13,8 @@ void Sokoban::run()
 
     while(!exit)
     {
-        update();
+        if(checkWin())
+            exit = true;
         draw();
         getInput();
     }
@@ -29,9 +30,9 @@ void Sokoban::initializieLevel()
     level->createLevel(lm->getLevel());
 }
 
-void Sokoban::update()
+bool Sokoban::checkWin()
 {
-    level->update();
+    return level->isWin();
 }
 
 void Sokoban::draw()
@@ -46,7 +47,6 @@ void Sokoban::getInput()
     if(key == 27)//If ESC
     {
         exit = true;
-        std::cout << "\n\n";
         return;
     }
 

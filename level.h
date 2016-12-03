@@ -22,7 +22,7 @@ public:
     void createLevel(std::vector<std::vector<int> > level);
     void setSize(int x, int y);
     void draw();
-    void update();
+    bool isWin();
     void processInput(char key);
 
 private: //fields
@@ -33,6 +33,8 @@ private: //fields
     int num;
 
     std::vector<FieldObject*>* objects;
+    std::vector<Box*>* boxes;
+    std::vector<Target*>* targets;
     Man* man;
 
     COORD position;

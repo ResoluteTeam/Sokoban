@@ -31,11 +31,24 @@ void Level::draw()
     {
         objects->at(i)->draw();
     }
+
+    for(int i = 0; i < boxes->size(); i++)
+    {
+        boxes->at(i)->draw();
+    }
 }
 
-void Level::update()
+bool Level::isWin()
 {
+    int count = 0;
 
+    for(int i = 0; i < targets->size(); i++)
+    {
+        if(!targets->at(i)->status())
+            return false;
+    }
+
+    return true;
 }
 
 void Level::processInput(char key)
@@ -82,7 +95,8 @@ void Level::moveMan(int horizontal, int vertical)
 void Level::createLevel(std::vector<std::vector<int> > level)
 {
     objects = new std::vector<FieldObject*>;
-    std::vector<Box*> boxes;
+    boxes = new std::vector<Box*>;
+    targets = new std::vector<Target*>;
 
     setSize(level.size(), level[0].size());
 
@@ -108,7 +122,7 @@ void Level::createLevel(std::vector<std::vector<int> > level)
                     Box* box = new Box;
                     box->setPosition(j,i);
                     objects->push_back(box);
-                    boxes.push_back(box);
+                    boxes->push_back(box);
              }
                  break;
 
@@ -117,6 +131,7 @@ void Level::createLevel(std::vector<std::vector<int> > level)
                     Target* target = new Target;
                     target->setPosition(j,i);
                     objects->push_back(target);
+                    targets->push_back(target);
              }
                  break;
 
@@ -137,8 +152,13 @@ void Level::createLevel(std::vector<std::vector<int> > level)
 
       man->setLevel(objects);
 
-      for(int i = 0; i < boxes.size(); i++)
+      for(int i = 0; i < boxes->size(); i++)
       {
-            boxes[i]->setLevel(objects);
+            boxes->at(i)->setLevel(objects);
+      }
+
+      for(int i = 0; i < targets->size(); i++)
+      {
+            targets->at(i)->setBoxes(boxes);
       }
 }

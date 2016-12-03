@@ -19,7 +19,7 @@ private:
     bool exit;
 
 private:
-    void update();
+    bool checkWin();
     void draw();
     void getInput();
 
